@@ -39,14 +39,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/eink_kitty"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
 
         <ImageButton
             android:id="@+id/btn_demo_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/converse_logo"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
 
     </LinearLayout>
 
