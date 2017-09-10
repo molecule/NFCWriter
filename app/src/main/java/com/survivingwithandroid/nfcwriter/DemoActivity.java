@@ -20,12 +20,24 @@ public class DemoActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ImageButton btn_demo_one;
+        ImageButton btn_demo_two;
 
-        ImageButton btn_demo_one = (ImageButton) findViewById(R.id.btn_demo_one);
+
+        btn_demo_one = (ImageButton) findViewById(R.id.btn_demo_one);
         btn_demo_one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "demo one clicked!", Toast.LENGTH_SHORT).show();
+            }
+        }
+        );
+
+        btn_demo_two = (ImageButton) findViewById(R.id.btn_demo_two);
+        btn_demo_two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "demo two clicked!", Toast.LENGTH_SHORT).show();
             }
         }
         );
