@@ -1,11 +1,15 @@
 package com.survivingwithandroid.nfcwriter;
 
+import android.graphics.drawable.BitmapDrawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class DemoActivity extends AppCompatActivity {
 
@@ -15,6 +19,18 @@ public class DemoActivity extends AppCompatActivity {
         setContentView(R.layout.demo_activity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        ImageButton btn_demo_one = (ImageButton) findViewById(R.id.btn_demo_one);
+        btn_demo_one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "demo one clicked!", Toast.LENGTH_SHORT).show();
+            }
+        }
+        );
+
+        //BitmapDrawable bdrawable = new BitmapDrawable(getApplicationContext().getResources(),bitmap);
 
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
