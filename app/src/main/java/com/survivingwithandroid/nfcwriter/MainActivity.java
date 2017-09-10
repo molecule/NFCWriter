@@ -112,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("Nfc", "launch new activity");
+                Intent intent = new Intent(getApplicationContext(), DemoActivity.class);
+                startActivity(intent);
             }
         });
     }
