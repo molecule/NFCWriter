@@ -62,7 +62,13 @@ public class DemoActivity extends AppCompatActivity {
         btn_demo_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "demo two clicked!", Toast.LENGTH_SHORT).show();
+                message = nfcMger.createTextMessage("2");
+                if (message != null) {
+
+                    dialog = new ProgressDialog(DemoActivity.this);
+                    dialog.setMessage("Tag NFC Tag please");
+                    dialog.show();
+                }
             }
         }
         );
