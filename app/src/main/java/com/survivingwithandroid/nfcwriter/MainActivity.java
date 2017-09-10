@@ -78,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText et = (EditText) findViewById(R.id.content);
 
-        FloatingActionButton btn = (FloatingActionButton) findViewById(R.id.fab);
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btn_send = (Button) findViewById(R.id.btn_send);
+        btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int pos = sp.getSelectedItemPosition();
@@ -87,13 +87,13 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (pos) {
                     case 0:
-                        message =  nfcMger.createUriMessage(content, "http://");
+                        message = nfcMger.createUriMessage(content, "http://");
                         break;
                     case 1:
-                        message =  nfcMger.createUriMessage(content, "tel:");
+                        message = nfcMger.createUriMessage(content, "tel:");
                         break;
                     case 2:
-                        message =  nfcMger.createTextMessage(content);
+                        message = nfcMger.createTextMessage(content);
                         break;
                 }
 
@@ -101,11 +101,19 @@ public class MainActivity extends AppCompatActivity {
 
                     dialog = new ProgressDialog(MainActivity.this);
                     dialog.setMessage("Tag NFC Tag please");
-                    dialog.show();;
+                    dialog.show();
+                    ;
                 }
             }
         });
 
+        Button btn_demo = (Button) findViewById(R.id.btn_demo);
+        btn_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Nfc", "launch new activity");
+            }
+        });
     }
 
     @Override

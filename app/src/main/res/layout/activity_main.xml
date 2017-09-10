@@ -32,12 +32,21 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:id="@+id/mainLyt">
 
+        <Button
+            android:id="@+id/btn_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="demo"
+            android:onClick="launchDemo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
         <TextView
             android:id="@+id/cLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Content"
-            />
+            android:layout_below="@id/btn_demo"/>
 
         <EditText
             android:id="@+id/content"
@@ -62,15 +71,14 @@
             android:layout_below="@id/cLabel1" />
 
         <Button
-            android:id="@+id/button_send"
+            android:id="@+id/btn_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="send"
-            android:onClick="sendMessage"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
-    
+
 
 </android.support.design.widget.CoordinatorLayout>
